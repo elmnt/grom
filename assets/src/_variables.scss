@@ -75,13 +75,13 @@ $transition-time: 0.25s;
 $img-vertical-align: middle;
 $figure-margin: 0;
 $figure-padding: 0; 
-$figcaption-margin: 5px 0 1rem 0;
+$figcaption-margin: 1px 0 0 0;
 $figcaption-padding: 1rem;
 $figcaption-font-family: $sans;
 $figcaption-font-size: .75rem;
 $figcaption-line-height: 1.125rem;
-$figcaption-color: black;
-$figcaption-background-color: black;
+$figcaption-color: $site-color-3;
+$figcaption-background-color: $site-color-1;
 
 // ----------- base.links
 

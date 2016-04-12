@@ -10,7 +10,8 @@
 
 <div class="container" style="padding:0 0 2rem 0;">
 <div class="wrap">
-
+  
+  <figure>
   <picture class="fit">
     <source srcset="/assets/img/grom-xl.jpg" media="(min-width: 1200px)">
     <source srcset="/assets/img/grom-lg.jpg" media="(min-width: 800px)">
@@ -18,6 +19,8 @@
     <source srcset="/assets/img/grom-sm.jpg" media="(min-width: 100px)">
     <img srcset="/assets/img/grom-sm.jpg" alt="The Grom: Owen Renzo Smith">
   </picture>
+  <figcaption>The Grom: Owen Renzo Smith</figcaption>
+  </figure>
 
 </div>
 </div>
