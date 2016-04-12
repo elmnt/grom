@@ -1,0 +1,97 @@
+// ---------------------- Main Nav
+
+nav {
+  font-family: $nav-font;
+  font-size: $nav-font-size;
+  line-height: $nav-line-height;
+}
+
+.navmain {
+	display: block;
+	text-align: center;
+}
+
+.navmain ul { 
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+.navmain ul li {
+	display: inline-block; 
+	float: left; // the float keeps them flush
+}
+.navmain ul li a {
+	display: block; 
+	background-color: $navmain-background; 
+	color: $navmain-color; 
+	padding: $navmain-button-pad; 
+	text-decoration: none; 
+	white-space: nowrap;
+	text-transform: $navmain-text-transform;
+
+	&:visited {
+		background-color: $navmain-background;
+		color: $navmain-color;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $navmain-background-hover;
+		color: $navmain-color-hover; 
+	}
+
+}
+
+// ----------- the mobile nav trigger
+
+.navmobile-trigger {
+	@extend .cf;
+	display: none;
+}
+
+// ----------- /the mobile nav trigger
+
+// ---------------- Mobile
+
+/*
+This is a simple, top-down mobile nav
+Credit: Nick Salloum
+http://callmenick.com/2013/12/21/simple-responsive-navigation-menu/
+*/
+
+.navmobile {}
+
+.navmobile ul {
+	display: none;
+	list-style-type: none;
+	text-align: $navmobile-text-align;
+	background-color: $navmobile-background; 
+}
+
+.navmobile li {
+	display: block;
+	&:not(:last-child) {
+		border-bottom: $navmobile-border;
+	}
+}
+
+.navmobile a {
+	display: block;
+	color: $navmobile-link-color;
+	padding: $navmobile-link-padding; 
+	background-color: $navmobile-link-background; 
+	text-decoration: none;
+	&:visited {
+		color: $navmobile-link-color;
+		background-color: $navmobile-link-background;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $navmobile-link-color-hover;
+		background-color: $navmobile-link-background-hover;
+	}
+}
+

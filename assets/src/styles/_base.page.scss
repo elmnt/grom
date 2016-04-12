@@ -1,0 +1,25 @@
+/* Base - Page
+------------------------------------------------------- */
+
+html {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+html,
+body { 
+  height: 100%; 
+}
+
+body {
+  margin: 0 auto; 
+  background-color: $page-background;
+}
+
+a, 
+a img, 
+input, 
+textarea,
+button {
+  @include trans($global-trans-time, $global-easing);
+}
+

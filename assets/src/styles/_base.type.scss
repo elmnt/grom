@@ -1,0 +1,164 @@
+/* Base - Type
+------------------------------------------------------- */
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: 100%;
+  line-height: $base-line-height;
+  font-weight: $normal;
+  color: $base-text-color;
+  -webkit-text-size-adjust: 100%;  //fix for iOS
+}
+
+p {
+  padding: $p-padding;
+}
+
+p, dl {
+  font-size: 100%;
+  margin: $p-margin;
+}
+
+ol, ul {
+  font-size: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin: $heading-margin;
+  padding: $heading-padding;
+  color: $heading-color;
+  text-rendering: optimizelegibility;
+}
+
+h5,h6 {
+  text-transform: $h-transform;
+}
+
+h1,.h1 { font-size: $h1; }
+h2,.h2 { font-size: $h2; }
+h3,.h3 { font-size: $h3; }
+h4,.h4 { font-size: $h4; }
+h5,.h5 { font-size: $h5; }
+h6,.h6 { font-size: $h6; }
+
+blockquote {
+  margin: $blockquote-margin;
+  padding: $blockquote-padding;
+  color: $blockquote-color;
+  border-left: $blockquote-border-left;
+}
+  blockquote,
+  blockquote p {
+    font-size: $h4;
+    font-style: italic;
+  }
+
+// definition list
+dl {
+  dt {
+    font-weight: $dt-font-weight;
+    margin: $dt-margin;
+    padding: $dt-padding;
+  }
+  dd {
+    margin: $dd-margin;
+    padding: $dd-padding;
+  }
+}
+
+// pre/code stuff
+pre, code, samp {
+  font-family: $mono-font;
+  font-size: inherit;
+}
+pre {
+  margin-top: 0;
+  margin-bottom: $pre-margin-bottom;
+  overflow-x: scroll;
+}
+
+// horizontal rule
+hr {
+  margin-top: $hr-margin-top;
+  margin-bottom: $hr-margin-bottom;
+  border: $hr-border;
+  border-bottom: $hr-border-bottom;
+}
+
+strong { 
+  font-weight: $bold;
+}
+
+.list-reset {
+  list-style-type: none;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* more helper classes, turn them on if you need them:
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+.bold { font-weight: bold; }
+.regular { font-weight: normal; }
+.italic { font-style: italic; }
+.caps { text-transform: uppercase; }
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+*/
+
+
+/* mrmrs
+
+// TYPE SCALE
+// A mobile first, highly readable type-scale.
+
+.f1    { font-size: 4rem; }
+.f2    { font-size: 2rem; }
+.f3    { font-size: 1.25rem; }
+.f4    { font-size: 1rem; }
+.f5,
+.small { font-size: .85rem; }
+
+@media only screen and (min-width: 48em) {
+  .f1-ns    { font-size: 4rem; }
+  .f2-ns    { font-size: 2rem; }
+  .f3-ns    { font-size: 1.25rem; }
+  .f4-ns    { font-size: 1rem; }
+  .f5-ns,
+  .small-ns { font-size: .85rem; }
+}
+
+@media only screen and (min-width: 48em) and (max-width: 64em) {
+  .f1-m    { font-size: 5rem; }
+  .f2-m    { font-size: 2.5rem; }
+  .f3-m    { font-size: 1.25rem; }
+  .f4-m    { font-size: 1rem; }
+  .f5-m,
+  .small-m { font-size: .85rem; }
+}
+
+@media only screen and (min-width: 64em)  {
+  .f1-l    { font-size: 5rem; }
+  .f2-l    { font-size: 2.5rem; }
+  .f3-l    { font-size: 1.5rem; }
+  .f4-l    { font-size: 1.25rem; }
+  .f5-l,
+  .small-l { font-size: 1rem; }
+}
+
+*/

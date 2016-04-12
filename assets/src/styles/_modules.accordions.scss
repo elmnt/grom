@@ -1,0 +1,29 @@
+/* Modules - Accordions
+credit: http://jsfiddle.net/ChrisStanyon/z9fWG/
+------------------------------------------------------- */
+
+$accordion-trigger-padding: .5rem 1rem;
+$accordion-background-color: $site-color-2;
+$accordion-content-padding: 1rem;
+
+#accordion li ul { display: none; }
+
+.accordion__item {
+  margin-bottom: 1px;
+}
+
+.accordion__trigger {
+  display: block;
+  padding: $accordion-trigger-padding;
+  background-color: $accordion-background-color;
+  text-decoration: none;
+}
+
+.accordion__content-holder {
+  @extend .list-reset;
+  background-color: $site-color-1; 
+}
+
+.accordion__content {
+  padding: $accordion-content-padding;
+}

@@ -1,0 +1,214 @@
+
+/* Global variables
+------------------------------------------------------- */
+
+// container background colors
+.cbg-1 { background-color: $site-color-1; }
+.cbg-2 { background-color: $site-color-2; }
+.cbg-3 { background-color: $site-color-3; }
+
+/* Tools
+------------------------------------------------------- */
+
+// ----------- styles/tools.mixins
+
+/* Generic
+------------------------------------------------------- */
+
+// ----------- styles/generic.normalize
+// ----------- styles/generic.box-sizing
+
+/* Base
+------------------------------------------------------- */
+
+// ----------- styles/base
+
+.cmbox--home {
+  @extend .cmbox;
+  padding: $cmbox-custom-padding-md;
+}
+
+.cmbox__title {
+  margin: 0;
+  padding: 0;
+}
+.cmbox__subtitle {
+  margin: 3rem 0 0 0;
+  padding: 0;
+}
+
+// ----------- styles/base.page
+// ----------- styles/base.images
+// ----------- styles/base.links
+// ----------- styles/base.type
+
+/* Modules
+------------------------------------------------------- */
+
+// ----------- styles/modules.buttons
+// ----------- styles/modules.form-hack
+// ----------- styles/modules.tables
+// ----------- styles/modules.layout
+// ----------- styles/modules.nav
+// ----------- styles/modules.responsiveslides
+// ----------- styles/modules.accordions
+
+/* Theme
+------------------------------------------------------- */
+
+// ----------- theme
+
+/* Media
+------------------------------------------------------- */
+
+// ----------- responsive
+// ----------- styles/media.print
+
+
+// ----------------------------------------------------------------------------- //
+// ----------------------------------------------------------------------------- //
+
+/* ---------------------- Code that needs to be added to the kit */
+
+.panel {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #eee;
+  @include border-radius (10px);
+  padding: 4rem;
+}
+
+// center all buttons that appear in a panel
+.center-content-holder {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.center-content {
+  margin: 0 auto !important;
+  display: inline-block; // this might cause problems
+}
+
+// see above
+.h-center-holder {
+  width: 100% !important;
+  text-align: center !important;
+}
+.h-center-content {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// a better solution for proper center/middle align
+
+.dt-holder {
+  width: 100%;
+  display: table;
+  text-align: center;
+  padding: 5rem 10rem;/*var*/
+  //position: relative; //optional
+}
+.dt-cell {
+  // we should remove margin/padding from (what will most likely be text)
+  // and rely on the padding of the holder
+  margin: 0;
+  padding: 0;
+  //line-height: 1.5em; //rely on the native element styles
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* ---------------------- /Code that needs to be added to the kit */
+
+
+/* ---------------------- header */
+
+/* 
+Force the z-index on the header content, 
+so the menus are always on top.
+( This should be placed in _trump.zindex.scss )
+*/
+.header, 
+.header * { 
+  z-index: 999 !important; 
+}
+
+.header {
+  //margin-bottom: 2rem;
+}
+
+.logo--header {}
+
+/* ----------- navmain */
+
+.navmain {}
+.navmain__links {} /* the ul */
+.navmain__links li {}
+.navmain__links a {}
+
+/* ----------- /navmain */
+
+/* ---------------------- /header */
+
+// ----------- Footer
+
+.footer {}
+
+// ---------------------- Custom styles: template to follow
+
+// BEM example 2:
+/*
+.contactForm {
+  
+  &__input {
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #333333;
+    color: #000000;
+    
+    &--large {
+       padding: 30px 20px;
+    }
+  }
+  
+  &__submit {
+    display: inline-block;
+    background: #ff0000;
+    color: #ffffff;
+  }
+}
+*/
+
+// BEM example
+/*
+.person {}
+.person__hand {}
+.person--female {}
+.person--female__hand {}
+.person__hand--left {}
+
+<form class="site-search  site-search--full">
+  <input type="text" class="site-search__field">
+  <input type="Submit" value ="Search" class="site-search__button">
+</form>
+*/
+
+/*
+.custom {}
+.custom__header {}
+.custom__body {}
+.custom__img {}
+.custom__list {}
+.custom__list li {}
+.custom__list a {}
+
+.custom--variation {}
+.custom--variation__header {} 
+.custom--variation__body {} 
+// etc
+
+.custom--variation {
+  @extend .custom;
+  // .custom--variation styles
+}
+*/

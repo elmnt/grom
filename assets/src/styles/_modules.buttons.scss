@@ -1,0 +1,65 @@
+/* Modules - Buttons
+------------------------------------------------------- */
+
+// base button
+button,
+.button {
+  display: inline-block; 
+  color: $button-color; 
+  background: $button-background-color;
+  text-decoration: none; 
+  text-transform: $button-text-transform; 
+  text-align: center; 
+  font-family: $sans; 
+  font-weight: $button-font-weight; 
+  font-size: $button-font-size; 
+  letter-spacing: $button-letter-spacing;
+  line-height: 1em; 
+  cursor: pointer; 
+  padding: $button-padding;
+  margin: $button-margin;
+  -webkit-font-smoothing: antialiased;
+  border: none !important;
+
+  &:visited {
+    color: $button-color-visited;
+    background: $button-background-color-visited;
+  }
+  &:hover,
+  &:focus {
+    color: $button-color-hover;
+    background: $button-background-color-hover;
+  }
+  &:active {
+    color: $button-color-active;
+    background: $button-background-color-active;
+  }
+
+}
+
+// alternate color buttons
+.button--altone {
+  @extend .button; 
+  background: $button-color-altone;
+}
+.button--alttwo {
+  @extend .button; 
+  background: $button-color-alttwo;
+}
+
+// big button
+.button--big {
+  @extend .button; 
+  padding: $button-big-padding;
+  font-size: $button-big-font-size;
+}
+
+// big alternate color buttons
+.button--big--altone {
+  @extend .button--big; 
+  background: $button-color-altone;
+}
+.button--big--alttwo {
+  @extend .button--big; 
+  background: $button-color-alttwo;
+}

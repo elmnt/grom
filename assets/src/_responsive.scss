@@ -1,0 +1,109 @@
+// Marc Jenkins breakpoints
+/*
+@include breakpoint(xs) {}
+@include breakpoint(sm) {}
+@include breakpoint(md) {}
+@include breakpoint(lg) {}
+*/
+
+/* Idea:
+Responsive Line Break
+<h1>
+  Responsive Line Break
+  <br class="md-show">
+  To Control Wrapping
+</h1>
+*/
+
+.display-none { display: none !important; }
+
+@media all and (max-width: 900px){
+
+  // ----------- portfolio display grids
+
+  .grid .four {
+    float: left; 
+    display: inline;
+    width: 49.5%;
+  }
+  .grid .counter .four:nth-child(2n+2) {  
+    margin-right: 0;
+  }
+
+  // ----------- /portfolio display grids
+
+}
+
+@media all and (max-width: 800px){
+
+  .container {
+    padding: $container-pad-tablet;
+  }
+
+  // ----------- multi-column grids
+
+  [class*='col-'] {
+    float: none; 
+    width: 100%; 
+    margin-right: 0;  
+  }
+
+  // ----------- /multi-column grids
+	
+	// ----------- navigation
+
+  .navmain { display: none; }
+  .container--nav {
+    background-color: $navmobile-background;
+    background-color: $navmobile-pad;
+  }
+  .navmobile-trigger {
+    display: block;
+    padding: $navmobile-trigger-pad;
+    color: $navmobile-trigger-color;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: right;
+
+    &:visited {
+    color: $navmobile-trigger-color;
+    background-color: transparent;
+    }
+    &:hover,
+    &:focus,
+    &:active { 
+      background-color: transparent; 
+      color: $navmobile-trigger-color-hover; 
+    }
+
+  }
+ 
+  // ----------- /navigation
+	
+}
+
+@media all and (max-width: 700px){}
+
+@media all and (max-width: 600px){
+
+  .container {
+    padding: $container-pad-mobile;
+  }
+
+  // hide the slideshow captions
+  .rslides_container p.caption { display: none; }
+
+	// ----------- portfolio display grids
+
+	.grid .four {
+		float: none; 
+		display: block;
+		width: 100%;
+		margin: 0 0 1% 0;
+	}
+
+	// ----------- /portfolio display grids
+
+}
+
+@media all and (max-width: 400px){}

@@ -1,0 +1,35 @@
+
+// ----------- Style Guide only styles
+
+.sk-label { color: red; }
+
+// labels in the style guide
+._sg { 
+  color: indianred; 
+  margin: 0 0 2rem 0;
+  padding: 0;
+}
+._sg-head { 
+  @extend ._sg;
+  margin-top: 2rem;
+}
+
+
+// show the difference between a 4-col split 
+// and TWO 2-col splits used together (as an alternative to 4-col)
+.show-fours .col-1-4 {
+  border: 1px solid indianred;
+}
+.show-twos > .col-1-2 {
+  border: 1px solid indianred;
+}
+@media all and (max-width: 1000px){
+
+  .show-twos .grid .col-1-2 {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+}

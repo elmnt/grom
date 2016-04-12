@@ -1,0 +1,104 @@
+/* Mixins
+------------------------------------------------------- */
+
+/*
+breakpoint mixin: credit Marc Jenkins
+https://github.com/marcjenkins
+(not in use, turn it on if you feel like it)
+*/
+
+/*
+@mixin breakpoint($size) {
+  @if $size == lg {
+    @media screen and (max-width: $break-lg) {
+      @content;
+    } 
+  }
+  @if $size == md {
+    @media screen and (max-width: $break-md) {
+      @content;
+    } 
+  }
+  @if $size == sm {
+    @media screen and (max-width: $break-sm) {
+      @content;
+    } 
+  }
+  @if $size == xs {
+    @media screen and (max-width: $break-xs) {
+      @content;
+    } 
+  }  
+}
+*/
+
+// ----------- border-box
+
+@mixin bbox {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+// ----------- content box
+
+@mixin cbox {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box; 
+}
+
+// ----------- border radius (uniform)
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// ----------- border radius (set each corner)
+
+@mixin border-radius-select($radtl,$radtr,$radbr,$radbl) {
+    -webkit-border-top-left-radius: $radtl;
+   -webkit-border-top-right-radius: $radtr;
+-webkit-border-bottom-right-radius: $radbr;
+ -webkit-border-bottom-left-radius: $radbl;
+		    -moz-border-radius-topleft: $radtl;
+		   -moz-border-radius-topright: $radtr;
+		-moz-border-radius-bottomright: $radbr;
+		 -moz-border-radius-bottomleft: $radbl;
+			   -ms-border-radius-topleft: $radtl;
+			  -ms-border-radius-topright: $radtr;
+		 -ms-border-radius-bottomright: $radbr;
+			-ms-border-radius-bottomleft: $radbl;
+				    border-top-left-radius: $radtl;
+				   border-top-right-radius: $radtr;
+				border-bottom-right-radius: $radbr;
+				 border-bottom-left-radius: $radbl;
+}
+
+// ----------- transitions
+
+@mixin trans($t, $easing) {
+  -webkit-transition: all $t $easing;
+  -moz-transition: all $t $easing;
+  -ms-transition: all $t $easing;
+  -o-transition: all $t $easing;
+  transition: all $t $easing;
+}
+
+/*
+@mixin transY($tY) {
+  -webkit-transform: translateY($tY);
+      -ms-transform: translateY($tY);
+          transform: translateY($tY);
+}
+*/
+
+// force text-smoothing (useful with headroom.js)
+/*
+@mixin forcesmooth {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
+*/

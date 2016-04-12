@@ -1,0 +1,334 @@
+
+/* NEW STUFF
+
+One-spot variables for major responsive changes in _variables
+For example: $nav-change: 800px;
+This could be grouped with variables for major responsive changes
+
+*/
+
+/* Start with some global variables
+------------------------------------------------------- */
+
+// breakpoints
+$break-xs: 480px;
+$break-sm: 700px;
+$break-md: 960px;
+$break-lg: 1200px;
+
+// global font sizes
+$base-font-size: 18px;
+$base-font-size-sm: 16px;
+
+// global border radius
+$base-border-radius: 4px;
+
+// Bottom margin for special clearfix 
+// (for example: applied to form select elements)
+$cfxmb-margin-bottom: 1rem;
+
+// colors
+$brand-color-1: orange;
+$brand-color-2: orangered;
+
+$site-color-1: #f6f6f6;
+$site-color-2: #ccc;
+$site-color-3: #999;
+
+// $base-text-color: see line 93
+// $color-error: red;
+// $color-success: green;
+
+/* Tools
+------------------------------------------------------- */
+
+// ----------- tools.mixins
+
+$global-trans-time: .5s;
+$global-easing: ease-out;
+
+/* Generic
+------------------------------------------------------- */
+
+// ----------- generic.normalize
+// ----------- generic.box-sizing
+
+/* Base
+------------------------------------------------------- */
+
+$sans: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$mono-font: "Consolas", Monaco, Menlo, "Courier New", monospace;
+
+$normal: 400;
+$bold: 700;
+
+// ----------- base
+
+// ----------- base.page
+
+$page-background: white;
+$transition-time: 0.25s;
+
+// ----------- base.images
+
+$img-vertical-align: middle;
+$figure-margin: 0;
+$figure-padding: 0; 
+$figcaption-margin: 5px 0 1rem 0;
+$figcaption-padding: 1rem;
+$figcaption-font-family: $sans;
+$figcaption-font-size: .75rem;
+$figcaption-line-height: 1.125rem;
+$figcaption-color: black;
+$figcaption-background-color: black;
+
+// ----------- base.links
+
+$link-text-decoration: underline;
+$link-color: $brand-color-1;
+$link-text-decoration-hover: none;
+$link-color-hover: $brand-color-2;
+
+// ----------- base.type
+
+$base-font-family: $sans;
+$base-line-height: 1.5em;
+$base-text-color: #555;
+$p-margin: 0 0 1rem 0; 
+$p-padding: 0;
+
+$heading-font-family: $sans;
+$heading-font-weight: $normal;
+$heading-line-height: 1.25;
+$heading-margin: .5rem 0;
+$heading-padding: 0;
+$heading-color: $base-text-color;
+
+$h1: 2rem;
+$h2: 1.5rem;
+$h3: 1.25rem;
+$h4: 1rem;
+$h5: .875rem;
+$h6: .75rem;
+
+$h-transform: uppercase;
+
+$blockquote-margin: 0 0 $base-font-size 0;
+$blockquote-padding: 0 0 0 10px;
+$blockquote-color: lighten($base-text-color, 20%);
+$blockquote-border-left: $base-text-color;
+
+// pre/code
+$pre-margin-bottom: 1em;
+
+// definition list
+$dt-font-weight: bold;
+$dt-margin: 1em 0 0 0;
+$dt-padding: 0;
+$dd-margin: 0;
+$dd-padding: 0;
+
+// horizontal rule
+$hr-margin-top: 1em;
+$hr-margin-bottom: $base-font-size - 1px;
+$hr-border: none;
+$hr-border-bottom: 1px solid $base-text-color;
+
+/* Modules
+------------------------------------------------------- */
+
+// ----------- modules.buttons
+
+$button-color: white;
+$button-background-color: black;
+$button-text-transform: uppercase;
+$button-font-weight: $bold;
+$button-font-size: .7rem;
+$button-letter-spacing: 1px;
+$button-padding: 1rem 2rem;
+$button-margin: .5rem 0;
+
+// button states
+$button-color-visited: $button-color;
+$button-background-color-visited: $button-background-color;
+$button-color-hover: $button-color;
+$button-background-color-hover: lighten($button-background-color, 25%);
+$button-color-active: $button-color;
+$button-background-color-active: lighten($button-background-color, 25%);
+
+// big buttons
+$button-big-padding: 2rem 4rem;
+$button-big-font-size: 1rem;
+
+// alternate color buttons
+$button-color-altone: $brand-color-1;
+$button-color-alttwo: $brand-color-2;
+
+// ----------- modules.form-hack
+
+// font
+$fh-font-family: $sans !important;
+$fh-font-size: 14px;
+$fh-font-color: $base-text-color;
+
+// borders
+$fh-border-radius: 0px;
+$fh-border-width: 2px;
+$fh-border-style: solid;
+$fh-border-color: $site-color-3;
+
+// inputs, textareas, select, option
+$fh-input-height: 40px;
+$fh-input-width: 100%;
+$fh-input-max-width: 100%;
+$fh-input-bg-color: #fff;
+$fh-focus-bg-color: #eee;
+$fh-focus-border-color: darken($fh-border-color, 50%);
+$fh-focus-font-color: darken($fh-font-color, 50%);
+
+// select vendor styling
+$fh-allow-vendor-styling: true;
+
+// fieldset & legend styling
+$fh-fieldset-bare: false;
+
+// buttons & input submits
+// $fh-button-height: 40px;
+$fh-button-height: auto; // we want the padding to determine this
+$fh-button-width: 100%;
+$fh-button-max-width: 200px;
+
+// adjust these colors
+$fh-button-font-color: $fh-font-color;
+$fh-button-bg-color: $fh-focus-bg-color;
+$fh-button-hover-bg-color: $fh-border-color;
+$fh-buton-hover-font-color: $fh-font-color;
+
+// layout
+$fh-centered: false;
+$fh-display: block;
+
+// ----------- modules.tables
+
+$table-global-font-family: $sans;
+$table-global-font-size: .8rem;
+$table-global-line-height: 1.25em;
+$table-global-padding: .5rem;
+
+$table-hide-static-size: $break-sm; // hide static tables in mobile
+
+$table-border: 1px solid $base-text-color;
+$table-thead-background-color: $base-text-color;
+$table-thead-th-color: white;
+$table-th-text-align: left;
+$table-th-font-family: $sans;
+$table-th-font-weight: 600;
+$table-th-td-padding: 1rem;
+$table-th-td-line-height: inherit;
+$table-th-vertical-align: bottom;
+$table-td-vertical-align: top;
+$table-td-text-align: left;
+
+$admin-table-border-color: $base-text-color;
+$admin-table-thead-background-color: $base-text-color; 
+
+// ----------- modules.layout
+
+/* Grid
+Setting container-max-width at 100% allows for edge-to-edge layout 
+(and edge-to-edge background color even when a wrap is used)
+The (optional) wrap sets a max content width
+|-------------------- screen --------------------|
+|--p--|------------ container -------------|--p--|
+|----------|---------- wrap ----------|----------|
+*/
+
+$container-max-width: 100%;
+$container-pad: 0 40px;
+$container-pad-tablet: 0 20px;
+$container-pad-mobile: 0 10px;
+$wrap-max-width: 1200px;
+$wrap-min-width: 100px;
+
+// center-align & middle-align box
+$cmbox-default-background: white;
+$cmbox-default-padding: 4rem;
+
+// and some increased padding options
+$cmbox-custom-padding-sm: 6rem;
+$cmbox-custom-padding-md: 8rem;
+$cmbox-custom-padding-lg: 10rem;
+
+// ----------- modules.nav
+
+$nav-font: $sans;
+$nav-font-size: 1rem;
+$nav-line-height: 1em;
+
+$navmain-text-transform: none;
+$navmain-holder-background: $site-color-1; // the container background
+$navmain-button-pad: 1rem; 
+$navmain-background: $site-color-1; 
+$navmain-background-hover: $site-color-1; 
+$navmain-color: $base-text-color; 
+$navmain-color-hover: $site-color-1;
+
+$navmobile-text-align: center;
+$navmobile-background: $site-color-1; 
+$navmobile-border: 1px solid white;
+$navmobile-link-color: $base-text-color;
+$navmobile-link-padding: 1rem; 
+$navmobile-link-background: $site-color-1;
+$navmobile-link-color-hover: $site-color-1;
+$navmobile-link-background-hover: $site-color-1;
+
+// modules.nav.scss -> _responsive.scss
+$navmobile-background: $site-color-1;
+$navmobile-pad: 0;
+$navmobile-trigger-pad: 1rem;
+$navmobile-trigger-color: $base-text-color;
+$navmobile-trigger-color-hover: $site-color-3;
+
+// ----------- modules.responsiveslides
+
+/* turned off
+$rslides-margin-bottom: 1rem;
+$rslides-tap-color: rgba(0,0,0,0);
+$rslides-nav-top: 50%;
+$rslides-nav-left: 0;
+$rslides-nav-z-index: 99;
+$rslides-nav-opacity: 0.7;
+$rslides-nav-opacity-active: 1.0;
+$rslides-tabs-margin: 1rem 0 0 0;
+$rslides-tabs-li-margin: 0 1rem 0 0;
+$rslides-tabs-radius: 15px;
+$rslides-tabs-background-hex: #ccc;
+$rslides-tabs-background-rgb: rgba(0,0,0, .2);
+$rslides-tabs-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+$rslides-tabs-width: 9px;
+$rslides-tabs-height: 9px;
+$rslides-tabs-here-hex: #222;
+$rslides-tabs-here-rgb: rgba(0,0,0, .8);
+$rslides-caption-display: block;
+$rslides-caption-bottom: 0;
+$rslides-caption-left: 0;
+$rslides-caption-right: 0;
+$rslides-caption-padding: 15px;
+$rslides-caption-text-align: center;
+$rslides-caption-background-hex: #000;
+$rslides-caption-background-rgb: rgba(0,0,0, .8);
+$rslides-caption-color: white;
+*/
+
+// ----------- modules.accordions
+
+/* Our Theme
+------------------------------------------------------- */
+
+// ----------- theme
+
+/* Media
+------------------------------------------------------- */
+
+// ----------- media.print

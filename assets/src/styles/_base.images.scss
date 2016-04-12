@@ -1,0 +1,43 @@
+/* Base - Images
+------------------------------------------------------- */
+
+/* 
+normal image sizing 
+(only responsive when the holder gets smaller than the img)
+*/
+img {
+  max-width: 100%;
+  vertical-align: $img-vertical-align; 
+  display: block; 
+}
+
+img.fit,
+.fit img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/*
+Google maps fix
+https://github.com/inuitcss/base.images/blob/master/_base.images.scss
+.gm-style img,
+img[width],
+img[height] {
+  max-width: none;
+}
+*/
+
+figure {
+  margin: $figure-margin; 
+  padding: $figure-padding; 
+}
+
+figcaption {
+  margin: $figcaption-margin;
+  padding: $figcaption-padding;
+  font-family: $figcaption-font-family;
+  font-size: $figcaption-font-size;
+  line-height: $figcaption-line-height;
+  color: $figcaption-color;
+  background-color: $figcaption-background-color;
+}
