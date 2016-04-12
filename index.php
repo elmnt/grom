@@ -16,7 +16,7 @@
     <source srcset="/assets/img/grom-lg.jpg" media="(min-width: 800px)">
     <source srcset="/assets/img/grom-md.jpg" media="(min-width: 600px)">
     <source srcset="/assets/img/grom-sm.jpg" media="(min-width: 100px)">
-    <img srcset="/assets/img/grom-sm.jpg" alt="Grom">
+    <img srcset="/assets/img/grom-sm.jpg" alt="The Grom: Owen Renzo Smith">
   </picture>
 
 </div>
