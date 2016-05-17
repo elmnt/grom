@@ -57,8 +57,11 @@ Responsive Line Break
     background-color: $navmobile-background;
     background-color: $navmobile-pad;
   }
+  .wrapnav--mobile {
+    text-align: right;
+  }
   .navmobile-trigger {
-    display: block;
+    display: inline-block;
     padding: $navmobile-trigger-pad;
     color: $navmobile-trigger-color;
     background-color: transparent;

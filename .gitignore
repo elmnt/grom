@@ -9,6 +9,5 @@ Thumbs.db
 config-codekit
 
 # misc
-assets/css/*
 assets/src/.sass-cache
 mrmrs-html.php

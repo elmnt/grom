@@ -50,8 +50,23 @@
 // ----------- styles/modules.tables
 // ----------- styles/modules.layout
 // ----------- styles/modules.nav
-// ----------- styles/modules.responsiveslides
-// ----------- styles/modules.accordions
+// ----------- styles/vendor/hamburgers/hamburgers
+
+// override some button settings that effect the menu button
+.navmobile-trigger button {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+}
+
+.hamburger-label {
+  color: $base-text-color;
+  vertical-align: top;
+  font-size: 1.25rem;
+  margin-right: 10px;
+}
 
 /* Theme
 ------------------------------------------------------- */

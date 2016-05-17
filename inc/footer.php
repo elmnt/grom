@@ -11,5 +11,13 @@
 
 <script src="/assets/js/main.min.js"></script>
 
+<script>
+  var $hamburger = $(".hamburger");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    // Do something else, like open/close menu
+  });
+</script>
+
 </body>
 </html>
