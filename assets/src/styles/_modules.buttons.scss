@@ -37,29 +37,9 @@ button,
 
 }
 
-// alternate color buttons
-.button--altone {
-  @extend .button; 
-  background: $button-color-altone;
-}
-.button--alttwo {
-  @extend .button; 
-  background: $button-color-alttwo;
-}
-
 // big button
 .button--big {
   @extend .button; 
   padding: $button-big-padding;
   font-size: $button-big-font-size;
-}
-
-// big alternate color buttons
-.button--big--altone {
-  @extend .button--big; 
-  background: $button-color-altone;
-}
-.button--big--alttwo {
-  @extend .button--big; 
-  background: $button-color-alttwo;
 }

@@ -29,16 +29,14 @@ ol, ul {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
   line-height: $heading-line-height;
   margin: $heading-margin;
   padding: $heading-padding;
   color: $heading-color;
   text-rendering: optimizelegibility;
-}
-
-h5,h6 {
-  text-transform: $h-transform;
+  text-transform: $heading-text-transform;
+  font-style: italic;
+  font-weight: $heading-bold;
 }
 
 h1,.h1 { font-size: $h1; }

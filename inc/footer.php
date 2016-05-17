@@ -10,6 +10,7 @@
 </footer>
 
 <script src="/assets/js/main.min.js"></script>
+<!-- <script src="https://use.fontawesome.com/497ed7ed37.js"></script> -->
 
 <script>
   var $hamburger = $(".hamburger");

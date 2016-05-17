@@ -17,8 +17,8 @@ $break-md: 960px;
 $break-lg: 1200px;
 
 // global font sizes
-$base-font-size: 18px;
-$base-font-size-sm: 16px;
+$base-font-size: 20px;
+$base-font-size-sm: 18px;
 
 // global border radius
 $base-border-radius: 4px;
@@ -34,6 +34,8 @@ $brand-color-2: orangered;
 $site-color-1: #f6f6f6;
 $site-color-2: #ccc;
 $site-color-3: #999;
+
+$base-text-color: #333;
 
 // $base-text-color: see line 93
 // $color-error: red;
@@ -56,8 +58,10 @@ $global-easing: ease-out;
 /* Base
 ------------------------------------------------------- */
 
+/* Lato:400,400italic|Playfair+Display:900,900italic */
+
 $sans: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif: Georgia, Times, "Times New Roman", serif;
+$serif: "Merriweather", Georgia, Times, "Times New Roman", serif;
 $mono-font: "Consolas", Monaco, Menlo, "Courier New", monospace;
 
 $normal: 400;
@@ -77,11 +81,15 @@ $figure-margin: 0;
 $figure-padding: 0; 
 $figcaption-margin: 1px 0 0 0;
 $figcaption-padding: 1rem;
+$figcaption-background-color: $base-text-color;
+$figcaption-text-align: right;
+
 $figcaption-font-family: $sans;
 $figcaption-font-size: .75rem;
 $figcaption-line-height: 1.125rem;
-$figcaption-color: $site-color-3;
-$figcaption-background-color: $site-color-1;
+$figcaption-color: $site-color-1;
+$figcaption-text-padding: 0;
+$figcaption-text-margin: 0;
 
 // ----------- base.links
 
@@ -94,25 +102,31 @@ $link-color-hover: $brand-color-2;
 
 $base-font-family: $sans;
 $base-line-height: 1.5em;
-$base-text-color: #333;
 $p-margin: 0 0 1rem 0; 
 $p-padding: 0;
 
-$heading-font-family: $sans;
-$heading-font-weight: $normal;
-$heading-line-height: 1.25;
-$heading-margin: .5rem 0;
+$heading-font-family: $serif;
+$heading-bold: bold;
+$heading-bold: $bold;
+$heading-line-height: 1.25em;
+$heading-margin: 1rem 0;
 $heading-padding: 0;
 $heading-color: $base-text-color;
+$heading-text-transform: none;
 
-$h1: 2rem;
-$h2: 1.5rem;
-$h3: 1.25rem;
-$h4: 1rem;
-$h5: .875rem;
-$h6: .75rem;
+$h1: 2.875rem;
+$h2: 2.5rem;
+$h3: 2.125rem;
+$h4: 1.75rem;
+$h5: 1.375rem;
+$h6: 1rem;
 
-$h-transform: uppercase;
+$h1-mobile: 1.625rem;
+$h2-mobile: 1.5rem;
+$h3-mobile: 1.375rem;
+$h4-mobile: 1.25rem;
+$h5-mobile: 1.125rem;
+$h6-mobile: 1rem;
 
 $blockquote-margin: 0 0 $base-font-size 0;
 $blockquote-padding: 0 0 0 10px;
@@ -160,10 +174,6 @@ $button-background-color-active: lighten($button-background-color, 25%);
 // big buttons
 $button-big-padding: 2rem 4rem;
 $button-big-font-size: 1rem;
-
-// alternate color buttons
-$button-color-altone: $brand-color-1;
-$button-color-alttwo: $brand-color-2;
 
 // ----------- modules.form-hack
 
@@ -266,25 +276,33 @@ $nav-font: $sans;
 $nav-font-size: 1rem;
 $nav-line-height: 1em;
 
+/*
+$site-color-1: #f6f6f6;
+$site-color-2: #ccc;
+$site-color-3: #999;
+
+$base-text-color: #333;
+*/
+
 $navmain-text-transform: none;
-$navmain-holder-background: $site-color-1; // the container background
+$navmain-holder-background: $base-text-color; // the container background
 $navmain-button-pad: 1rem; 
-$navmain-background: $site-color-1; 
-$navmain-background-hover: $site-color-1; 
-$navmain-color: $base-text-color; 
-$navmain-color-hover: $site-color-1;
+$navmain-background: $base-text-color; 
+$navmain-background-hover: $base-text-color; 
+$navmain-color: $site-color-1; 
+$navmain-color-hover: $site-color-3;
 
 $navmobile-text-align: center;
-$navmobile-background: $site-color-1; 
-$navmobile-border: 1px solid white;
-$navmobile-link-color: $base-text-color;
+$navmobile-background: $base-text-color; 
+$navmobile-border: 1px solid $site-color-1;
+$navmobile-link-color: $site-color-1;
 $navmobile-link-padding: 1rem; 
-$navmobile-link-background: $site-color-1;
-$navmobile-link-color-hover: $site-color-1;
-$navmobile-link-background-hover: $site-color-1;
+$navmobile-link-background: $base-text-color;
+$navmobile-link-color-hover: $site-color-3;
+$navmobile-link-background-hover: $base-text-color;
 
 // modules.nav.scss -> _responsive.scss
-$navmobile-background: $site-color-1;
+$navmobile-background: $base-text-color;
 $navmobile-pad: 0;
 $navmobile-trigger-pad: 1rem;
 $navmobile-trigger-color: $base-text-color;

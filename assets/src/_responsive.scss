@@ -89,6 +89,17 @@ Responsive Line Break
 
 @media all and (max-width: 600px){
 
+  html {
+    font-size: $base-font-size-sm;
+  }
+
+  h1,.h1 { font-size: $h1-mobile; }
+  h2,.h2 { font-size: $h2-mobile; }
+  h3,.h3 { font-size: $h3-mobile; }
+  h4,.h4 { font-size: $h4-mobile; }
+  h5,.h5 { font-size: $h5-mobile; }
+  h6,.h6 { font-size: $h6-mobile; }
+
   .container {
     padding: $container-pad-mobile;
   }

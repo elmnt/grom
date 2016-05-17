@@ -72,22 +72,56 @@ but we don't want them tied to that class.
   vertical-align: middle;
 }
 
-/*
-These padding settings are included with the layout module, 
-because they are meant specifically for grid elements. For generic padding 
-classes, see base.scss (White Space)
+/**
+ * 12-column Grid
+ */
+
+$grid-columns:     12;
+$grid-gutter:      3;
+$single-col-width: (100 - (($grid-columns - 1) * $grid-gutter )) / $grid-columns;
+
+.grid {
+  width: 100%; 
+  &:after {  
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[class*='col-'] {
+  float: left; 
+  margin-right: $grid-gutter * 1%; 
+  .grid &:last-of-type {
+    margin-right: 0; 
+  }
+  border-collapse: collapse !important;
+}
+
+// column widths
+// (this generates our individual column classes)
+@for $column from 1 through $grid-columns {
+  .col-#{$column} {
+    width: (($single-col-width * $column) + (($column - 1) * $grid-gutter) * 1%)
+  }
+}
+
+/* generates this:
+.col-1  { width: 5.5833333333%; }
+.col-2  { width: 14.1666666667%; }
+.col-3  { width: 22.75%; }
+.col-4  { width: 31.3333333333%; }
+.col-5  { width: 39.9166666667%; }
+.col-6  { width: 48.5%; }
+.col-7  { width: 57.0833333333%; }
+.col-8  { width: 65.6666666667%; }
+.col-9  { width: 74.25%; }
+.col-10 { width: 82.8333333333%; }
+.col-11 { width: 91.4166666667%; }
+.col-12 { width: 100%; }
 */
 
 /*
-.pad-small { padding: $pad-small; }
-.pad { padding: $pad; }
-.pad-big { padding: $pad-big; }
-*/
-
-/* Multi-Column Grids 
-(inspired by the CSS Tricks grids)
-------------------------------------------------------- */
-
 $multi-grid-margin: 3%;
 
 [class*='col-'] {
@@ -113,6 +147,7 @@ $multi-grid-margin: 3%;
 .col-2-3 { width: 65.6666666666%; }
 .col-1-4 { width: 22.75%; }
 .col-3-4 { width: 74.25%; }
+*/
 
 /* /Multi-Column Grids */
 
@@ -130,6 +165,7 @@ The .counter div is used to add a (non-grid-specific) parent holder,
 so we can address the child divs by count (hence the name)
 */
 
+/*
 .counter { 
   margin: 0; 
   padding: 0;  
@@ -164,5 +200,6 @@ so we can address the child divs by count (hence the name)
 .grid .counter .two:nth-child(2n+2) {  
   margin-right: 0;
 }
+*/
 
 /* /Portfolio Display */

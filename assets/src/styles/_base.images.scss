@@ -35,9 +35,15 @@ figure {
 figcaption {
   margin: $figcaption-margin;
   padding: $figcaption-padding;
+  background-color: $figcaption-background-color;
+  text-align: $figcaption-text-align;
+}
+
+figcaption p {
   font-family: $figcaption-font-family;
   font-size: $figcaption-font-size;
   line-height: $figcaption-line-height;
   color: $figcaption-color;
-  background-color: $figcaption-background-color;
+  padding: $figcaption-text-padding;
+  margin: $figcaption-text-margin;
 }

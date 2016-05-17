@@ -7,7 +7,7 @@
 
   <div class="navmobile-trigger">
     <button class="hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation">
-      <span class="hamburger-label">MENU</span>
+      <!-- <span class="hamburger-label">MENU</span> -->
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
@@ -16,10 +16,11 @@
 
   <nav class="navmain cf">
     <ul class="list-reset cf">
-      <li><a href="#">Link One</a></li>
-      <li><a href="#">Link Two</a></li>
-      <li><a href="#">Link Three</a></li>
-      <li><a href="#">Link Four</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Bio</a></li>
+      <li><a href="#">Books</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Blog</a></li>
     </ul>
   </nav>
 
