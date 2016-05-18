@@ -1,0 +1,161 @@
+/*! http://responsiveslides.com v1.54 by @viljamis */
+
+// ----------- rslides core styles
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+// ----------- rslides theme
+
+.rslides {
+  margin: 0 auto;
+}
+.rslides_container {
+  margin-bottom: $rslides-margin-bottom;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.rslides1_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: $rslides-tap-color;
+  top: $rslides-nav-top;
+  left: $rslides-nav-left;
+  z-index: $rslides-nav-z-index;
+  opacity: $rslides-nav-opacity;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  // height/width dependent upon the graphic
+  height: 61px;
+  width: 38px;
+  background: transparent url("/assets/img/_slideshow/themes.gif") no-repeat left top;
+  margin-top: -45px;
+}
+.rslides1_nav:active {
+  opacity: $rslides-nav-opacity-active;
+}
+.rslides1_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0;
+}
+.rslides1_nav:focus {
+  outline: none;
+}
+
+.rslides_tabs {
+  margin-top: $rslides-tabs-margin;
+  text-align: center;
+}
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin: $rslides-tabs-li-margin;
+}
+.rslides_tabs a {
+  text-indent: -9999px;
+  overflow: hidden;
+  -webkit-border-radius: $rslides-tabs-radius;
+  -moz-border-radius: $rslides-tabs-radius;
+  border-radius: $rslides-tabs-radius;
+  background: $rslides-tabs-background-hex;
+  background: $rslides-tabs-background-rgb;
+  display: inline-block;
+  _display: block;
+  *display: block;
+  -webkit-box-shadow: $rslides-tabs-shadow;
+  -moz-box-shadow: $rslides-tabs-shadow;
+  box-shadow: $rslides-tabs-shadow;
+  width: $rslides-tabs-width;
+  height: $rslides-tabs-height;
+}
+.rslides_tabs .rslides_here a {
+  background: $rslides-tabs-here-hex;
+  background: $rslides-tabs-here-rgb;
+}
+.caption {
+  position: absolute;
+  display: $rslides-caption-display;
+  bottom: $rslides-caption-bottom;
+  left: $rslides-caption-left;
+  right: $rslides-caption-right;
+  padding: $rslides-caption-padding;
+  text-align: $rslides-caption-text-align;
+  background: $rslides-caption-background-hex;
+  background: $rslides-caption-background-rgb;
+  color: $rslides-caption-color;
+}
+
+/* 
+Force slider1 nav styles into any additional slider(s).
+For some reason, the same styles are not carrying over, even 
+though the instance is the same in docready
+*/
+/*
+.rslides2_nav {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: 99;
+  opacity: 0.7;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: url("/assets/img/_slideshow/themes.gif") no-repeat scroll left top transparent;
+  margin-top: -45px;
+}
+*/
+/* also force some caption styles */
+/*
+.rslides .caption {
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 3rem;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+  text-align: center;
+  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.65);
+  color: #fff; 
+  font-size: 2rem; 
+  line-height: 2.125rem; 
+}
+*/

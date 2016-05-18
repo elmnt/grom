@@ -1,36 +1,6 @@
-/* Mixins
-------------------------------------------------------- */
-
-/*
-breakpoint mixin: credit Marc Jenkins
-https://github.com/marcjenkins
-(not in use, turn it on if you feel like it)
-*/
-
-/*
-@mixin breakpoint($size) {
-  @if $size == lg {
-    @media screen and (max-width: $break-lg) {
-      @content;
-    } 
-  }
-  @if $size == md {
-    @media screen and (max-width: $break-md) {
-      @content;
-    } 
-  }
-  @if $size == sm {
-    @media screen and (max-width: $break-sm) {
-      @content;
-    } 
-  }
-  @if $size == xs {
-    @media screen and (max-width: $break-xs) {
-      @content;
-    } 
-  }  
-}
-*/
+/**
+ * Mixins
+ */
 
 // ----------- border-box
 

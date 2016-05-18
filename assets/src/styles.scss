@@ -7,30 +7,34 @@
 // ----------- Generic
 
 // choose your reset method
-// @import "styles/generic.normalize";
-@import "styles/generic.reset";
+@import "styles/generic.normalize";
+//@import "styles/generic.reset";
 @import "styles/generic.box-sizing";
 
 // ----------- Base
 
-@import "styles/base";
+@import "styles/base.utilities";
 @import "styles/base.page";
 @import "styles/base.images";
+@import "styles/base.figure";
 @import "styles/base.links";
 @import "styles/base.type";
 
-// ----------- Modules (active)
+// ----------- Modules
 
 @import "styles/modules.buttons";
-@import "styles/modules.form-hack";
 @import "styles/modules.tables";
-@import "styles/modules.layout"; // the grid & overall site structure
-@import "styles/modules.nav"; // the main site nav
-@import "styles/vendor/hamburgers/hamburgers"; // https://jonsuh.com/hamburgers/
+@import "styles/modules.layout";
+@import "styles/modules.nav";
 
-// ----------- Modules (inactive)
+// ----------- Vendor
 
-// @import "styles/modules.responsiveslides"; // basic, responsive slideshow
+@import "styles/vendor/form-hack";
+@import "styles/vendor/hamburgers/hamburgers";
+
+// ----------- Vendor (inactive)
+
+// @import "styles/vendor/responsiveslides";
 // @import "styles/modules.accordions";
 
 // ----------- Our Theme

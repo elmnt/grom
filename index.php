@@ -1,5 +1,54 @@
 <?php include 'inc/top.php'; ?>
 
+<style>
+/* some styles for the demo only */
+.h2-demo {
+  margin: 3rem 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1em;
+  font-weight: bold;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: orangered;
+}
+.p-demo {
+  color: orangered;
+}
+.footer {
+  color: #999;
+  text-decoration: none;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer a:hover,
+.footer a:active,
+.footer a:focus {
+  color: #666;
+}
+.footer .container--full {
+  background-color: #333;
+}
+.footer .button {
+  margin-bottom: 1rem;
+  background-color: white;
+  color: #333;
+}
+.footer .button:hover,
+.footer .button:active,
+.footer .button:focus {
+  background-color: #666;
+  color: #333;
+}
+.footer i {
+  margin: 0 10px;
+}
+/* /some styles for the demo only */
+</style>
+
 </head>
 
 <body>
@@ -8,7 +57,14 @@
 
 <?php include 'inc/header.php'; ?>
 
-<div class="container" style="padding:0 0 2rem 0;">
+<div class="container">
+<div class="wrap">
+<h1 class="mt4 mb4">Grom is a lightweight, responsive framework for fast prototyping, or building small sites.</h1>
+  <p style="width:100%;max-width:720px;"><strong>Grom</strong> &mdash; (short for grommet)<br>Describes someone that is young and is a skilled surfer/skateboarder. Extended to refer to any young person, in surf/skate culture.</p>
+</div>
+</div>
+
+<div class="container--full">
 <div class="wrap">
   
   <figure>
@@ -22,13 +78,6 @@
   <figcaption><p>The Grom: Owen Renzo Smith<p></figcaption>
   </figure>
 
-</div>
-</div>
-
-<div class="container">
-<div class="wrap">
-<h1>Grom is a simple, lightweight responsive framework. Keep it light &amp; nimble, or add your own modules to build it up.</h1>
-  <p style="width:100%;max-width:720px;"><strong>Grom</strong> &mdash; (short for grommet)<br>Describes someone that is young and is a skilled surfer/skateboarder. Extended to refer to any young person, in surf/skate culture.</p>
 </div>
 </div>
 
@@ -77,9 +126,9 @@
 /full-width slideshow -->
 
 <div class="container">
-<div class="wrap pad">
+<div class="wrap">
 
-  <h2>Typography</h2>
+  <h2 class="h2-demo">Typography</h2>
 
   <h1>h1 Headline Lorem Ipsum</h1>
   <h2>h2 Headline Lorem Ipsum</h2>
@@ -109,7 +158,8 @@
     <li>This is a list item blah blah</li>
   </ol>
 
-  <h2>Grids</h2>
+  <h2 class="h2-demo" style="margin-bottom:1rem;">12-Column Grid</h2>
+  <p class="p-demo" style="margin-bottom:3rem;">I've included a few samples here, but there are many more options.</p>
 
   <div class="grid">
     <h5>2-Column Grid</h5>
@@ -160,195 +210,222 @@
     </div>
   </div>
 
-  <h2>Buttons</h2>
+  <h2 class="h2-demo">Buttons</h2>
 
+  <h5>Button</h5>
+  <a href="#!" class="button">Shizzle</a>   
+
+  <h5>Big Button</h5>
+  <a href="#!" class="button--big">Drizzle</a>
+
+  <h2 class="h2-demo">Responsive Table</h2>
+    
   <div class="grid">
+    <table cellspacing="0" border="0" class="responsive-table responsive-table--optional-class">
+    <thead>
+    <tr>
+      <th width="50%">Thead</th>
+      <th width="25%">Thead</th>
+      <th width="25%">Thead</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="mobile-thead">Mobile Thead</td>
+      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+      <td class="mobile-thead">Mobile Thead</td>
+      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+      <td class="mobile-thead">Mobile Thead</td>
+      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+    </tr>
+    </tbody>
+    </table>
+  </div><!-- /.grid -->
 
-    <h5>Button</h5>
-    <a href="#!" class="button">Submit</a>   
+  <h2 class="h2-demo" style="margin-bottom:1rem;">Forms</h2>
+  <p class="p-demo" style="margin-bottom:3rem;">I'm using <a href="http://formhack.io" target="_blank">FormHack</a>, by <a href="https://twitter.com/ireaderinokun" target="_blank">@ireaderinokun</a>.</p>
 
-    <h5>Big Button</h5>
-    <a href="#!" class="button--big">Call to Action</a>
+  <div class="single-column" style="max-width:500px;">
 
-  </div>
+    <form>
 
-    <h2>Panels</h2>
+    <section id="form-input">
 
-    <div class="grid">
+      <h2 class="h2-demo">Input</h2>
 
-      <div class="single-column">
-        <div class="panel">
-          <h2>This is a Panel</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit anim id est laborum.</p>
-          <a href="#!" class="button--big">Call to Action</a>
-        </div>
-      </div>
-    
-    </div><!-- /.grid -->
+      <label for="">Input Type Text</label>
+      <input type="text" name="input-type-text">
 
+      <label for="">Input Type Email</label>
+      <input type="email" name="input-type-email">
 
+      <label for="">Input Type Password</label>
+      <input type="password" name="input-type-password">
 
-    <h2>Tables</h2>
-    <h3>Static Table: Option 1</h3>
-    <div class="grid">
-      <table cellspacing="0" border="0" class="static-table static-table--optional-class">
-        <thead>
-        <tr>
-          <th width="25%">Thead</th>
-          <th width="25%">Thead</th>
-          <th width="25%">Thead</th>
-          <th width="25%">Thead</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        </tr>
-        <tr>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        </tr>
-        </tbody>
-      </table>
-    </div><!-- /.grid -->
+      <label for="">Input Type URL</label>
+      <input type="url" name="input-type-url">
 
-    <p>&nbsp;</p>
+      <label for="">Input Type Tel</label>
+      <input type="tel" name="input-type-tel">
 
-    <h3>Static Table: Option 2</h3>
-    <div class="grid">
-      <table cellspacing="0" border="0" class="static-table static-table--optional-class">
-        <thead>
-        <tr>
-          <th width="25%">Thing</th>
-          <th width="25%">Type of Thing</th>
-          <th width="25%">Color of Thing</th>
-          <th width="25%">Size of Thing</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td class="table__row-label">Animal</td>
-          <td>Cow</td>
-          <td>Black &amp; White</td>
-          <td>Big</td>
-        </tr>
-        <tr>
-          <td class="table__row-label">Car</td>
-          <td>Corolla</td>
-          <td>Red</td>
-          <td>Small</td>
-        </tr>
-        </tbody>
-      </table>
-    </div><!-- /.grid -->
+      <label for="">Input Type Number</label>
+      <input type="number" name="input-type-number">
 
-    <p>&nbsp;</p>
+      <label for="">Input Type Search</label>
+      <input type="search" name="input-type-search">
 
-    <p>This is not to imply that there are <strong>only</strong> two options for styling tables. They're just offered as starting points for different style options.</p>
-    <h3>Responsive Table</h3>
-    <p>This is a <strong>basic</strong> responsive table. All requirements should be clarified in the project's definition phase, and the proper responsive table layout can be built up from this starting point.</p>
-    
-    <div class="grid">
-      <table cellspacing="0" border="0" class="responsive-table responsive-table--optional-class">
-      <thead>
-      <tr>
-        <th width="50%">Thead</th>
-        <th width="25%">Thead</th>
-        <th width="25%">Thead</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td class="mobile-thead">Mobile Thead</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        <td class="mobile-thead">Mobile Thead</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        <td class="mobile-thead">Mobile Thead</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-      </tr>
-      </tbody>
-      </table>
-    </div><!-- /.grid -->
+      <label for="">Input Type Checkbox</label>
+      <input type="checkbox" name="input-type-checkbox1"> Value 1<br>
+      <input type="checkbox" name="input-type-checkbox2"> Value 2<br>
+      <input type="checkbox" name="input-type-checkbox3"> Value 3<br>
 
-    <h2>Forms</h2>
+      <label for="">Input Type Radio</label>
+      <input type="radio" name="input-type-radio1"> Value 1<br>
+      <input type="radio" name="input-type-radio2"> Value 2<br>
+      <input type="radio" name="input-type-radio3"> Value 3<br>
 
-    <div class="grid">
+      <label for="">Input Type Range</label>
+      <input type="range" name="input-type-range">
 
-      <div class="single-column">
-        <div class="panel">
+      <label for="">Input Type File</label>
+      <input type="file" name="input-type-file">
+      <input type="file" name="input-type-file">
 
-        <form>
+      <label for="">Input Type Color</label>
+      <input type="color" name="input-type-color">
 
-          <label>Input Label</label>
-          <input type="text" placeholder="Placeholder" />
+      <label for="">Input Type Date</label>
+      <input type="date" name="input-type-date">
 
-          <label>Input Label</label>
-          <input type="text" placeholder="Placeholder" />
+      <label for="">Input Type Datetime Local</label>
+      <input type="datetime-local" name="input-type-datetime-local">
 
-          <label>Select Box</label>
-          <select>
-            <option selected="selected">Please Choose</option>
-            <option value="homer">Homer</option>
-            <option value="marge">Marge</option>
-            <option value="bart">Bart</option>
-            <option value="lisa">Lisa</option>
-            <option value="maggie">Maggie</option>
-          </select>
+      <label for="">Input Type Month</label>
+      <input type="month" name="input-type-month">
 
-          <label>Textarea Label</label>
-          <textarea placeholder="Placehoder"></textarea>
+      <label for="">Input Type Time</label>
+      <input type="time" name="input-type-time">
 
-          <fieldset>
-            <label>Choose Your Favorite</label>
-            <div class="form--radio-group"><input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label></div>
-            <div class="form--radio-group"><input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label></div>
-            <div class="form--radio-group"><input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label></div>
-          </fieldset>
+      <label for="">Input Type Week</label>
+      <input type="week" name="input-type-week">
 
-          <fieldset>
-            <label>Check these out</label>
-            <div class="form--cb-group"><input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label></div>
-            <div class="form--cb-group"><input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label></div>
-            <div class="form--cb-group"><input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label></div>
-          </fieldset>
+    </section>
 
-          <button type="submit">Submit</button>
+    <section id="form-select-button">
 
-        </form>
+      <h2 class="h2-demo">Datalist</h2>
 
-        </div>
-      </div>
-    
-    </div>
+      <label for="">Input with Datalist</label>
+      <input list="browsers">
 
+      <datalist id="browsers">
+      <option value="Internet Explorer">
+      </option><option value="Firefox">
+      </option><option value="Chrome">
+      </option><option value="Opera">
+      </option><option value="Safari">
+      </option></datalist>
 
+    </section>
 
-    <h2>Images</h2>
+    <section id="form-textarea">
 
-    <div class="grid">
+      <h2 class="h2-demo">Textarea</h2>
 
-      <p class="_sg">By default, images appear in their native size (no special class) and will respond down on smaller screens, once the container is smaller than the image.</p>
-      <div class="grid" style="border:1px solid indianred;padding:10px;">
-        <img src="/assets/img/grom-sm.jpg">
-      </div>
-    
-      <p>&nbsp;</p>
+      <label for="textarea">Textarea</label>
+      <textarea name="textarea" id="" cols="30" rows="10"></textarea>
 
-      <p class="_sg">Images with class="fit" will ALWAYS fill the container, no matter their native size.</p>
-      <div class="grid" style="border:1px solid indianred;padding:10px;">
-        <img src="/assets/img/grom-sm.jpg" class="fit">
-      </div>
+      </section>
 
-    </div>
+    <section id="form-select-option">
 
+      <h2 class="h2-demo">Select and Option</h2>
 
-  </div>
-  </div>
+      <label for="select-normal">Select Default</label>
+      <select name="select-normal" id="">
+      <option value="">Option 1</option>
+      <option value="">Option 2</option>
+      <option value="">Option 3</option>
+      </select>
+
+      <label for="select-optgroup">Select with Optgroup</label>
+      <select name="select-optgroup" id="">
+      <optgroup label="Optgroup 1">
+      <option value="">Option 1</option>
+      <option value="">Option 2</option>
+      <option value="">Option 3</option>
+      </optgroup>
+
+      <optgroup label="Optgroup 2">
+      <option value="">Option 1</option>
+      <option value="">Option 2</option>
+      <option value="">Option 3</option>
+      </optgroup>
+      </select>
+
+      <label for="select-multiple">Select Multiple</label>
+      <select name="select-multiple" id="" multiple="">
+      <option value="">Option 1</option>
+      <option value="">Option 2</option>
+      <option value="">Option 3</option>
+      </select>
+
+    </section>
+
+    <section id="form-select-button">
+
+      <h2 class="h2-demo">Buttons and Input Type Submit/Reset</h2>
+
+      <label for="button-type-button">Button Type Button</label>
+      <button type="button">Button</button>
+
+      <label for="button-type-reset">Button Type Reset</label>
+      <button type="reset">Reset</button>
+
+      <label for="button-type-submit">Button Type Submit</label>
+      <button type="submit">Submit</button>
+
+      <label for="">Input Type Button</label>
+      <input type="button" name="input-type-button" value="Button">
+
+      <label for="">Input Type Reset</label>
+      <input type="reset" name="input-type-reset">
+
+      <label for="">Input Type Submit</label>
+      <input type="submit" name="input-type-submit">
+
+      <label for="">Input Type Submit Disabled</label>
+      <input type="submit" name="input-type-submit" disabled="">
+
+      <label for="">Input Type Image</label>
+      <input type="image" name="input-type-image">
+
+    </section>
+
+    <section id="form-select-fieldset">
+
+      <h2 class="h2-demo">Fieldset</h2>
+
+      <fieldset>
+
+      <legend>Legend Title</legend>
+
+      <label for="input-text">Input</label>
+      <input type="text" id="input-text">
+
+      <label for="input-password">Another Input</label>
+      <input type="text" id="input-password">
+
+      </fieldset>
+
+      </section>
+
+    </form>
+
+  </div><!-- /.single-column -->
+
+</div>
+</div>
 
 <?php include 'inc/footer.php'; ?>
 

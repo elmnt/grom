@@ -28,8 +28,8 @@ $base-border-radius: 4px;
 $cfxmb-margin-bottom: 1rem;
 
 // colors
-$brand-color-1: orange;
-$brand-color-2: orangered;
+$brand-color-1: orangered;
+$brand-color-2: orange;
 
 $site-color-1: #f6f6f6;
 $site-color-2: #ccc;
@@ -46,7 +46,7 @@ $base-text-color: #333;
 
 // ----------- tools.mixins
 
-$global-trans-time: .5s;
+$global-trans-time: .25s;
 $global-easing: ease-out;
 
 /* Generic
@@ -114,6 +114,8 @@ $heading-padding: 0;
 $heading-color: $base-text-color;
 $heading-text-transform: none;
 
+$h1-margin: 2rem 0;
+
 $h1: 2.875rem;
 $h2: 2.5rem;
 $h3: 2.125rem;
@@ -155,7 +157,7 @@ $hr-border-bottom: 1px solid $base-text-color;
 // ----------- modules.buttons
 
 $button-color: white;
-$button-background-color: black;
+$button-background-color: $base-text-color;
 $button-text-transform: uppercase;
 $button-font-weight: $bold;
 $button-font-size: .7rem;
@@ -167,64 +169,18 @@ $button-margin: .5rem 0;
 $button-color-visited: $button-color;
 $button-background-color-visited: $button-background-color;
 $button-color-hover: $button-color;
-$button-background-color-hover: lighten($button-background-color, 25%);
-$button-color-active: $button-color;
-$button-background-color-active: lighten($button-background-color, 25%);
+$button-background-color-hover: lighten($button-background-color, 35%);
 
 // big buttons
 $button-big-padding: 2rem 4rem;
 $button-big-font-size: 1rem;
 
-// ----------- modules.form-hack
-
-// font
-$fh-font-family: $sans !important;
-$fh-font-size: 14px;
-$fh-font-color: $base-text-color;
-
-// borders
-$fh-border-radius: 0px;
-$fh-border-width: 2px;
-$fh-border-style: solid;
-$fh-border-color: $site-color-3;
-
-// inputs, textareas, select, option
-$fh-input-height: 40px;
-$fh-input-width: 100%;
-$fh-input-max-width: 100%;
-$fh-input-bg-color: #fff;
-$fh-focus-bg-color: #eee;
-$fh-focus-border-color: darken($fh-border-color, 50%);
-$fh-focus-font-color: darken($fh-font-color, 50%);
-
-// select vendor styling
-$fh-allow-vendor-styling: true;
-
-// fieldset & legend styling
-$fh-fieldset-bare: false;
-
-// buttons & input submits
-// $fh-button-height: 40px;
-$fh-button-height: auto; // we want the padding to determine this
-$fh-button-width: 100%;
-$fh-button-max-width: 200px;
-
-// adjust these colors
-$fh-button-font-color: $fh-font-color;
-$fh-button-bg-color: $fh-focus-bg-color;
-$fh-button-hover-bg-color: $fh-border-color;
-$fh-buton-hover-font-color: $fh-font-color;
-
-// layout
-$fh-centered: false;
-$fh-display: block;
-
 // ----------- modules.tables
 
 $table-global-font-family: $sans;
-$table-global-font-size: .8rem;
+$table-global-font-size: 1rem;
 $table-global-line-height: 1.25em;
-$table-global-padding: .5rem;
+$table-global-padding: 1rem;
 
 $table-hide-static-size: $break-sm; // hide static tables in mobile
 
@@ -285,24 +241,24 @@ $base-text-color: #333;
 */
 
 $navmain-text-transform: none;
-$navmain-holder-background: $base-text-color; // the container background
+$navmain-holder-background: white;
 $navmain-button-pad: 1rem; 
-$navmain-background: $base-text-color; 
-$navmain-background-hover: $base-text-color; 
-$navmain-color: $site-color-1; 
+$navmain-background: white; 
+$navmain-background-hover: white; 
+$navmain-color: $base-text-color; 
 $navmain-color-hover: $site-color-3;
 
 $navmobile-text-align: center;
-$navmobile-background: $base-text-color; 
+$navmobile-background: white; 
 $navmobile-border: 1px solid $site-color-1;
-$navmobile-link-color: $site-color-1;
+$navmobile-link-color: $base-text-color;
 $navmobile-link-padding: 1rem; 
-$navmobile-link-background: $base-text-color;
+$navmobile-link-background: white;
 $navmobile-link-color-hover: $site-color-3;
-$navmobile-link-background-hover: $base-text-color;
+$navmobile-link-background-hover: white;
 
 // modules.nav.scss -> _responsive.scss
-$navmobile-background: $base-text-color;
+$navmobile-background: white;
 $navmobile-pad: 0;
 $navmobile-trigger-pad: 1rem;
 $navmobile-trigger-color: $base-text-color;
@@ -340,6 +296,63 @@ $rslides-caption-color: white;
 */
 
 // ----------- modules.accordions
+
+// ----------- vendor
+
+// ----------- vendor.form-hack
+
+// Font
+$fh-font-family: 'Raleway', sans-serif !default;
+$fh-font-size: 16px !default;
+$fh-font-color: rgb(40, 40, 40) !default;
+
+// Borders
+$fh-border-radius: 5px !default;
+$fh-border-width: 1px !default;
+$fh-border-style: solid !default;
+$fh-border-color: rgb(200, 200, 200) !default;
+
+// Inputs, Textareas, Select, Option
+$fh-input-height: 40px !default;
+$fh-input-width: 100% !default;
+$fh-input-max-width: 100% !default;
+$fh-input-bg-color: #fff !default;
+$fh-focus-bg-color: rgb(220, 220, 220) !default;
+$fh-focus-border-color: $fh-border-color !default;
+$fh-focus-font-color: $fh-font-color !default;
+
+// Select Vendor Styling
+$fh-allow-select-vendor-styling: true !default;
+
+// Fieldset & Legend Styling
+$fh-fieldset-bare: false !default;
+
+// Buttons & Input Submits
+$fh-button-height: 40px !default;
+$fh-button-width: 100% !default;
+$fh-button-max-width: 200px !default;
+$fh-button-font-color: $fh-font-color !default;
+$fh-button-bg-color: $fh-focus-bg-color !default;
+$fh-button-hover-bg-color: $fh-border-color !default;
+$fh-button-hover-font-color: $fh-font-color !default;
+
+// Layout
+$fh-centered: false !default;
+$fh-display: block !default;
+
+// ----------- hamburger
+
+$hamburger-padding-x                       : 15px !default;
+$hamburger-padding-y                       : 15px !default;
+$hamburger-layer-width                     : 40px !default;
+$hamburger-layer-height                    : 4px !default;
+$hamburger-layer-spacing                   : 6px !default;
+$hamburger-layer-color                     : $base-text-color;
+$hamburger-layer-border-radius             : 4px !default;
+$hamburger-hover-opacity                   : 0.7 !default;
+$hamburger-hover-transition-duration       : 0.15s !default;
+$hamburger-hover-transition-timing-function: linear !default;
+
 
 /* Our Theme
 ------------------------------------------------------- */

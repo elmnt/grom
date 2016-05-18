@@ -2,6 +2,8 @@
 
 ###A starter kit for smaller web projects
 
+As of my most recent push, I've installed [FormHack](http://formhack.io), but haven't had a chance to update the styles.
+
 Some people from whom I've gotten a lot of inspiration (and code):
 
 Eric Meyer  

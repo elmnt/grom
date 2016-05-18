@@ -1,15 +1,9 @@
-/* Tables & Table Object
-------------------------------------------------------- */
-
-// Default table styles are defined in base. Use the table-light color style with other 
-// color utilities or create custom theme extensions to suit your needs.
-// http://jxnblk.github.io/table-object
-
-// ----------- basscss table
+/**
+ * Modules - Responsive Tables
+ */
 
 // ----------- default table styles
 
-// optional: global font family & size for tables
 table, 
 table * {
   font-family: $table-global-font-family;
@@ -42,18 +36,6 @@ table th {
   border-collapse: collapse !important;
 }
 
-/* we're using a global setting instead
-th {
-  font-family: $table-th-font-family;
-  font-weight: $table-th-font-weight;
-}
-th,
-td {
-  padding: $table-th-td-padding;
-  line-height: $table-th-td-line-height;
-}
-*/
-
 th { 
   vertical-align: $table-th-vertical-align; 
   text-align: $table-th-text-align;
@@ -63,104 +45,16 @@ td {
   text-align: $table-td-text-align;
 }
 
-// horizontal row labels
+// ----------- horizontal row labels
+
 .table__row-label {
   background-color: lighten($table-thead-background-color, 20%);
   color: $table-thead-th-color;
 }
 
-// ----------- table object
-
-/* REPLACE my new one
-.table {
-  display: table;
-  width: 100%;
-}
-
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.table-fixed {
-  table-layout: fixed;
-}
-*/
-
-// ----------- static (min-width) table
-
-.static-table { 
-  width: 100%;
-  min-width: 800px; 
-}
-
-/*
-We hide static tables on mobile so they don't degrade the display.
-We do it MUCH sooner than the .static-table min-width setting 
-to take into account the L/R padding of the site's containers.
-*/
-
-@media all and (max-width: 900px){
-  
-  .static-table {
-    display: none;
-  }
-
-}
-
-/*
-.static-table, 
-.static-table th, 
-.static-table td { 
-  border: 1px solid $table-border-color; 
-  border-collapse: collapse; 
-}
-
-.static-table th, 
-.static-table td { 
-  padding: 1rem; 
-}
-
-.static-table thead { 
-  background-color: $table-head-background-color; 
-  color: white; 
-  font-family: $sans; 
-  font-weight: 400; 
-}
-*/
-
-// ----------- responsive table
-
 .responsive-table { 
-  width: 100%;
-  //min-width: 400px; 
+  width: 100%; 
 }
-
-/*
-.responsive-table, 
-.responsive-table td, 
-.responsive-table th { 
-  border: $table-border; 
-  border-collapse: collapse !important;
-}
-
-.responsive-table td, 
-.responsive-table th { 
-  padding: 1rem; 
-}
-
-.responsive-table thead { 
-  background-color: $table-head-background-color; 
-  color: white; 
-  font-family: $sans; 
-  font-weight: 400; 
-}
-
-.responsive-table {
-  display: table;
-  width: 100%;
-}
-*/
 
 // ----------- responsive table breakpoints
 
@@ -200,139 +94,4 @@ to take into account the L/R padding of the site's containers.
     display: block;   
   }
 
-}
-
-/*
-.field-light {
-  background-color: white;
-  -webkit-transition: box-shadow .2s ease;
-          transition: box-shadow .2s ease;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ccc;
-  border-radius: 3px;
-}
-
-.field-light:focus {
-  outline: none;
-  border-color: #0076df;
-  box-shadow: 0 0 2px rgba(0, 118, 223, .5);
-}
-
-.field-light:disabled {
-  color: #777;
-  background-color: rgba(0, 0, 0, .125);
-}
-
-.field-light:read-only:not(select) {
-  background-color: rgba(0, 0, 0, .125);
-}
-
-.field-light:invalid {
-  border-color: #f95020;
-}
-
-.field-light.is-success {
-  border-color: #00cf26;
-}
-
-.field-light.is-warning {
-  border-color: #efcc00;
-}
-
-.field-light.is-error {
-  border-color: #f95020;
-}
-
-.radio-light,
-.checkbox-light {
-  -webkit-transition: box-shadow .2s ease;
-          transition: box-shadow .2s ease;
-}
-
-.radio-light {
-  border-radius: 50%;
-}
-
-.radio-light:focus,
-.checkbox-light:focus {
-  outline: none;
-  box-shadow: 0 0 2px rgba(0, 118, 223, .5);
-}
-
-.field-dark {
-  color: white;
-  background-color: rgba(0, 0, 0, .25);
-  border: 1px solid rgba(0, 0, 0, .0625);
-  border-radius: 3px;
-}
-
-.field-dark::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, .75);
-}
-
-.field-dark::-moz-placeholder {
-  color: rgba(255, 255, 255, .75);
-}
-
-.field-dark:-ms-input-placeholder {
-  color: rgba(255, 255, 255, .75);
-}
-
-.field-dark::placeholder {
-  color: rgba(255, 255, 255, .75);
-}
-
-.field-dark:focus {
-  outline: 0;
-  border: 1px solid rgba(255, 255, 255, .5);
-}
-
-.field-dark:read-only:not(select) {
-  background-color: rgba(255, 255, 255, .25);
-}
-
-.field-dark:invalid {
-  border-color: #f95020;
-}
-
-.field-dark.is-success {
-  border-color: #00cf26;
-}
-
-.field-dark.is-warning {
-  border-color: #efcc00;
-}
-
-.field-dark.is-error {
-  border-color: #f95020;
-}
-
-.table-light th,
-.table-light td {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #ccc;
-}
-*/
-
-// ---------------------- admin table styles
-
-.table--admin, 
-.table--admin td, 
-.table--admin th { 
-  border: 1px solid $admin-table-border-color; 
-  border-collapse: collapse !important;
-}
-
-.table--admin td, 
-.table--admin th { 
-  //padding: 1rem; 
-}
-
-.table--admin thead { 
-  background-color: $admin-table-thead-background-color; 
-  color: white; 
-  //font-family: $sans; 
-  //font-weight: 400; 
 }

@@ -2,6 +2,7 @@
 ------------------------------------------------------- */
 
 // base button
+
 button,
 .button {
   display: inline-block; 
@@ -19,25 +20,23 @@ button,
   padding: $button-padding;
   margin: $button-margin;
   -webkit-font-smoothing: antialiased;
-  border: none !important;
+  border: none;
 
   &:visited {
     color: $button-color-visited;
     background: $button-background-color-visited;
   }
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $button-color-hover;
     background: $button-background-color-hover;
-  }
-  &:active {
-    color: $button-color-active;
-    background: $button-background-color-active;
   }
 
 }
 
 // big button
+
 .button--big {
   @extend .button; 
   padding: $button-big-padding;
