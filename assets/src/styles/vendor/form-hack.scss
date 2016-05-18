@@ -117,6 +117,10 @@ textarea {
   border: $fh-border-width $fh-border-style $fh-border-color;
 }
 
+input[type="search"] {
+  max-width: 80%;
+}
+
 /* Fields with standard height */
 input[type="text"],
 input[type="email"],
