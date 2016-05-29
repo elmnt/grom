@@ -136,7 +136,6 @@
   <h4>h4 Headline Lorem Ipsum</h4>
   <h5>h5 Headline Lorem Ipsum</h5>
   <h6>h6 Headline Lorem Ipsum</h6>
-  <p class="_sg">The h6 element is always set at the $base-font-size, and we increase up, incrementally.</p>
 
   <h5>Unordered List</h5>
   <ul>
