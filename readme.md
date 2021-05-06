@@ -1,6 +1,8 @@
-#Grom
+This project is old, and is no longer supported ;)
 
-###A starter kit for smaller web projects
+# Grom
+
+### A starter kit for smaller web projects
 
 As of my most recent push, I've installed [FormHack](http://formhack.io), but haven't had a chance to update the styles.
 
